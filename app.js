@@ -1,7 +1,7 @@
 // Imported Images in a Array by giving complete url
 var imges = ['img/1.png', 'img/2.png', 'img/3.png', 'img/4.png', 'img/5.png'];
 
-var landing_page = "https://campanha.boticario.com.br/cashbackdiadospais/BOAS_VINDAS?utm_source=Nbids&utm_medium=Paid&utm_campaign=OBoticario_Opus_202111_Cashback_Conversao_Nbids_Conversao_CPC_NA_Sao-Paulo-Capital_Geoloc&utm_content=OBoticario_Opus_202111_Cashback_Conversao_Nbids_Conversao_CPC_NA_Sao-Paulo-Capital_Geoloc_All_INT_Data_INT_18-49_SP_All_NA&utm_term=OBoticario_Opus_202111_Cashback_Conversao_Nbids_Conversao_CPC_NA_Sao-Paulo-Capital_Geoloc_All_INT_Data_INT_18-49_SP_All_NA_NA_NA_Display_Banner_300x600_NA_NA"
+var landing_page = "https://campanha.boticario.com.br/cashbackdiadospais/BOAS_VINDAS?utm_source=Nbids&utm_medium=Paid&utm_campaign=OBoticario_Opus_202111_Cashback_Conversao_Nbids_Conversao_CPC_NA_Sao-Paulo-Capital_Geoloc&utm_content=OBoticario_Opus_202111_Cashback_Conversao_Nbids_Conversao_CPC_NA_Sao-Paulo-Capital_Geoloc_All_INT_Data_INT_18-49_SP_All_NA&utm_term=OBoticario_Opus_202111_Cashback_Conversao_Nbids_Conversao_CPC_NA_Sao-Paulo-Capital_Geoloc_All_INT_Data_INT_18-49_SP_All_NA_NA_NA_Display_Interstitial-Mobile_320x480_NA_NA"
 
 var location_link = "https://www.google.com/maps/search/o+boticario"
 
@@ -28,7 +28,7 @@ function openfile(filepath){
 function APICall(n){
   // console.log(n,"no")
   var x =JSON.stringify({ key:n})
-  fetch('https://demo.infuseads.com:8081/core/key-count/?id=30', {
+  fetch('https://demo.infuseads.com:8081/core/key-count/?id=31', {
     method: 'POST',
     body: x,
     headers: {
@@ -50,7 +50,7 @@ function APICall(n){
 
 window.onload = function(){
   var x =JSON.stringify({ key:"impression"})
-  fetch('https://demo.infuseads.com:8081/core/key-count/?id=30', {
+  fetch('https://demo.infuseads.com:8081/core/key-count/?id=31', {
     method: 'POST',
     body: x,
     headers: {
@@ -84,40 +84,40 @@ function pg1func(op){
 
 function pg2func(op){
     var leftarrow = document.getElementById("leftarrow");
-    leftarrow.style = "position: absolute;top: 280px;left: 19px;height: 30px;background: transparent;width: 25px;border-radius: 2%;border: 1px solid transparent;"
+    leftarrow.style = "position: absolute;top: 185px;left: 19px;height: 30px;background: transparent;width: 25px;border-radius: 2%;border: 1px solid transparent;"
     leftarrow.onclick= function(){
-        APICall("page1");
+      APICall("page1");
         op.src = imges[4];
         pg5func(op);
     };
 
     var rightarrow = document.getElementById("rightarrow");
-    rightarrow.style = "position: absolute;top: 280px;left: 272px;height: 30px;background: transparent;width: 25px;border-radius: 2%;border: 1px solid transparent;";
+    rightarrow.style = "position: absolute;top: 185px;left: 292px;height: 30px;background: transparent;width: 25px;border-radius: 2%;border: 1px solid transparent;";
     rightarrow.onclick= function(){
-        APICall("page2");
+      APICall("page2");
         op.src = imges[2];
         pg3func(op);
     };
 
     var btn1 = document.getElementById("btn1");
-    btn1.style = "position: absolute;top: 517px;left: 19px;height: 41px;background: transparent;width: 120px;border-radius: 2%;border: 1px solid transparent;";
+    btn1.style = "position: absolute;top: 395px;left: 20px;height: 42px;background: transparent;width: 126px;border-radius: 2%;border: 1px solid transparent;";
     btn1.onclick= function(){
-        APICall("page2leftkey1");
-        window.open(landing_page);
+      APICall("page2leftkey1");
+       window.open(landing_page);
     };
 
     var btn2 = document.getElementById("btn2");
-    btn2.style = "position: absolute;top: 517px;left: 145px;height: 41px;background: transparent;width: 155px;border-radius: 2%;border: 1px solid transparent;";
+    btn2.style = "position: absolute;top: 395px;left: 153px;height: 42px;background: transparent;width: 165px;border-radius: 2%;border: 1px solid transparent;";
     btn2.onclick= function(){
       APICall("page2leftkey2");
-      window.open(location_link);
+       window.open(location_link);
     };
 };
 
 
 function pg3func(op){
     var leftarrow = document.getElementById("leftarrow");
-    leftarrow.style = "position: absolute;top: 280px;left: 19px;height: 30px;background: transparent;width: 25px;border-radius: 2%;border: 1px solid transparent;"
+    leftarrow.style = "position: absolute;top: 185px;left: 19px;height: 30px;background: transparent;width: 25px;border-radius: 2%;border: 1px solid transparent;"
     leftarrow.onclick= function(){
       APICall("page2leftkey3");
         op.src = imges[1];
@@ -125,7 +125,7 @@ function pg3func(op){
     };
 
     var rightarrow = document.getElementById("rightarrow");
-    rightarrow.style = "position: absolute;top: 280px;left: 272px;height: 30px;background: transparent;width: 25px;border-radius: 2%;border: 1px solid transparent;";
+    rightarrow.style = "position: absolute;top: 185px;left: 292px;height: 30px;background: transparent;width: 25px;border-radius: 2%;border: 1px solid transparent;";
     rightarrow.onclick= function(){
       APICall("page2rightkey1");
         op.src = imges[3];
@@ -133,14 +133,14 @@ function pg3func(op){
     };
 
     var btn1 = document.getElementById("btn1");
-    btn1.style = "position: absolute;top: 517px;left: 19px;height: 41px;background: transparent;width: 120px;border-radius: 2%;border: 1px solid transparent;";
+    btn1.style = "position: absolute;top: 395px;left: 20px;height: 42px;background: transparent;width: 126px;border-radius: 2%;border: 1px solid transparent;";
     btn1.onclick= function(){
       APICall("page2rightkey2");
        window.open(landing_page);
     };
 
     var btn2 = document.getElementById("btn2");
-    btn2.style = "position: absolute;top: 517px;left: 145px;height: 41px;background: transparent;width: 155px;border-radius: 2%;border: 1px solid transparent;";
+    btn2.style = "position: absolute;top: 395px;left: 153px;height: 42px;background: transparent;width: 165px;border-radius: 2%;border: 1px solid transparent;";
     btn2.onclick= function(){
       APICall("page2rightkey3");
        window.open(location_link);
@@ -149,7 +149,7 @@ function pg3func(op){
 
 function pg4func(op){
     var leftarrow = document.getElementById("leftarrow");
-    leftarrow.style = "position: absolute;top: 280px;left: 19px;height: 30px;background: transparent;width: 25px;border-radius: 2%;border: 1px solid transparent;"
+    leftarrow.style = "position: absolute;top: 185px;left: 19px;height: 30px;background: transparent;width: 25px;border-radius: 2%;border: 1px solid transparent;"
     leftarrow.onclick= function(){
       APICall("page3");
         op.src = imges[2];
@@ -157,7 +157,7 @@ function pg4func(op){
     };
 
     var rightarrow = document.getElementById("rightarrow");
-    rightarrow.style = "position: absolute;top: 280px;left: 272px;height: 30px;background: transparent;width: 25px;border-radius: 2%;border: 1px solid transparent;";
+    rightarrow.style = "position: absolute;top: 185px;left: 292px;height: 30px;background: transparent;width: 25px;border-radius: 2%;border: 1px solid transparent;";
     rightarrow.onclick= function(){
       APICall("page3leftkey1");
         op.src = imges[4];
@@ -165,14 +165,14 @@ function pg4func(op){
     };
 
     var btn1 = document.getElementById("btn1");
-    btn1.style = "position: absolute;top: 517px;left: 19px;height: 41px;background: transparent;width: 120px;border-radius: 2%;border: 1px solid transparent;";
+    btn1.style = "position: absolute;top: 395px;left: 20px;height: 42px;background: transparent;width: 126px;border-radius: 2%;border: 1px solid transparent;";
     btn1.onclick= function(){
       APICall("page3leftkey2");
        window.open(landing_page);
     };
 
     var btn2 = document.getElementById("btn2");
-    btn2.style = "position: absolute;top: 517px;left: 145px;height: 41px;background: transparent;width: 155px;border-radius: 2%;border: 1px solid transparent;";
+    btn2.style = "position: absolute;top: 395px;left: 153px;height: 42px;background: transparent;width: 165px;border-radius: 2%;border: 1px solid transparent;";
     btn2.onclick= function(){
       APICall("page3leftkey3");
        window.open(location_link);
@@ -181,7 +181,7 @@ function pg4func(op){
 
 function pg5func(op){
     var leftarrow = document.getElementById("leftarrow");
-    leftarrow.style = "position: absolute;top: 280px;left: 19px;height: 30px;background: transparent;width: 25px;border-radius: 2%;border: 1px solid transparent;"
+    leftarrow.style = "position: absolute;top: 185px;left: 19px;height: 30px;background: transparent;width: 25px;border-radius: 2%;border: 1px solid transparent;"
     leftarrow.onclick= function(){
       APICall("page3rightkey1");
         op.src = imges[3];
@@ -189,7 +189,7 @@ function pg5func(op){
     };
 
     var rightarrow = document.getElementById("rightarrow");
-    rightarrow.style = "position: absolute;top: 280px;left: 272px;height: 30px;background: transparent;width: 25px;border-radius: 2%;border: 1px solid transparent;";
+    rightarrow.style = "position: absolute;top: 185px;left: 292px;height: 30px;background: transparent;width: 25px;border-radius: 2%;border: 1px solid transparent;";
     rightarrow.onclick= function(){
       APICall("page3rightkey2");
         op.src = imges[1];
@@ -197,14 +197,14 @@ function pg5func(op){
     };
 
     var btn1 = document.getElementById("btn1");
-    btn1.style = "position: absolute;top: 517px;left: 19px;height: 41px;background: transparent;width: 120px;border-radius: 2%;border: 1px solid transparent;";
+    btn1.style = "position: absolute;top: 395px;left: 20px;height: 42px;background: transparent;width: 126px;border-radius: 2%;border: 1px solid transparent;";
     btn1.onclick= function(){
       APICall("page3rightkey3");
        window.open(landing_page);
     };
 
     var btn2 = document.getElementById("btn2");
-    btn2.style = "position: absolute;top: 517px;left: 145px;height: 41px;background: transparent;width: 155px;border-radius: 2%;border: 1px solid transparent;";
+    btn2.style = "position: absolute;top: 395px;left: 153px;height: 42px;background: transparent;width: 165px;border-radius: 2%;border: 1px solid transparent;";
     btn2.onclick= function(){
       APICall("page4");
        window.open(location_link);
